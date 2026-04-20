@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background-image: url('https://images.pexels.com/photos/35657242/pexels-photo-35657242.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+}
+.nav-bar{
+    position: sticky;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0, 0.5);
+}
+.nav-contenar{
+    width: 100%;
+    max-width: 1200px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-contenar .logo{
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nave-menu{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: all 1s ease-in-out;
+    }
+.nave-menu li a{
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: transparent;
+    border: 2px soli transparent;
+    border-radius: 15px;
+    color: white;
+    transition: all .5s ease-in-out;
+    padding: 10px;
+    display: inline-block;
+    
+
+}
+.nave-menu li a:hover{
+    background: grey;
+    border: 2px solid rgb(62, 61, 61);
+    
+
+
+}
+.nav-toggle{
+    width: 25px;
+    display: none;
+    background: transparent;
+    padding: 10px;
+    
+}
+.nav-toggle .bar{
+    width: 25px;
+    height: 3px;
+    border: none;
+    background: white;
+    display: block;
+    margin: 5px auto;
+    
+}
+@media (max-width:900px) {
+    .nav-contenar .nave-menu{
+
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        gap: 1.7rem !important;
+        width: 250px;
+        height: 100vh;
+        align-items: flex-start;
+        box-shadow: 0, 10px 10px rgba(0, 0, 0, 0.5);
+        padding: 5rem 1.5rem;
+        backdrop-filter: blur(10px);
+
+    }
+    .nav-contenar .nave-menu{
+        display: flex;
+    }
+    .nav-toggle{
+        display: block;
+        z-index: 999;
+    } 
+    .nav-toggle.activ .bar:nth-child(2){
+        opacity: none;
+    } 
+    .nav-toggle.activ .bar:nth-child(1){
+        translate;
+    } 
+
+    
+}
